@@ -31,7 +31,7 @@ class User(AbstractBaseUser):
     )
     first_name=models.CharField(max_length=200)
     last_name=models.CharField(max_length=200)
-    organization=models.CharField(max_length=200)
+    organization = models.CharField(max_length=200, null=True, blank=True)
     is_active=models.BooleanField(default=True)
     is_admin=models.BooleanField(default=False)
     created_at=models.DateTimeField(auto_now_add=True)
